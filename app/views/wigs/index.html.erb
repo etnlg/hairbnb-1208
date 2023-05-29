@@ -1,0 +1,11 @@
+<div class = "container">
+  <h1>Discover all our wigs!</h1>
+  <% @wigs.each do |wig| %>
+    <div class = "bg-white p-2 m-3 rounded shadow">
+    <h2><%= wig.title %></h2>
+    <p><%= wig.description %></p>
+    <p><%= wig.price_per_day %></p>
+    <p><%= wig.location %></p>
+    </div>
+  <% end %>
+</div>
