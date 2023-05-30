@@ -1,0 +1,32 @@
+<div class = "d-flex justify-content-center m-3">
+  <h2>All of your bookings<h2>
+</div>
+
+<div class = "row">
+  <div class = "col-6">
+    <h4>Your booking waiting for response!<h4>
+    <% @bookings.where(satuts: 'pending').each do |b| %>
+      <div class = "container bg-white rounded shadow text-align m-3">
+        <p><%= User.find(b.user_id).first_name %> <%=User.find(b.user_id).last_name%> wants to book your wig!</p>
+        <p><strong>From:</strong> <%= b.start_date %></p>
+        <p><strong>To:</strong> <%= b.end_date %></p>
+        <%= link_to "Accept the request",
+        accept_path(b),
+        data: {turbo_method: :patch, turbo_confirm: "Are you sure?"}%>
+        <%= link_to "Decline the request",
+        decline_path(b),
+        data: {turbo_method: :patch, turbo_confirm: "Are you sure?"}%>
+      </div>
+    <% end %>
+  </div>
+  <div class = "col-6">
+    <h4>Your upcoming booking<h4>
+    <% @bookings.where(satuts: 'accepted').each do |b| %>
+      <div class = "container bg-white rounded shadow text-align m-3">
+        <p><%= User.find(b.user_id).first_name %> <%=User.find(b.user_id).last_name%> wants to book your wig!</p>
+        <p><strong>From:</strong> <%= b.start_date %></p>
+        <p><strong>To:</strong> <%= b.end_date %></p>
+      </div>
+    <% end %>
+  </div>
+</div>
