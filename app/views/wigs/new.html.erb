@@ -1,1 +1,10 @@
-<h1>ayoo</h1>
+<div class="container my-3">
+  <h1>Add a new wig</h1>
+  <%= simple_form_for(@wig) do |f| %>
+    <%= f.input :title %>
+    <%= f.input :description %>
+    <%= f.input :location %>
+    <%= f.input :price_per_day %>
+    <%= f.submit %>
+  <% end %>
+</div>
