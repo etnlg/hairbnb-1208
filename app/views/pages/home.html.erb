@@ -7,7 +7,7 @@
   </div>
 </div>
 
-<div class = "d-flex justify-content-center">
+<div class = "d-flex justify-content-center m-3">
   <%= link_to "Dsicover all the wigs available", wigs_path%>
 </div>
 
@@ -19,7 +19,7 @@
     <div class = "m-2 p-2 bg-white shadow rounded">
     <p><%= wig.title %></p>
     <p><%= wig.description %></p>
-    <p>Price per day: <%= wig.price_per_day.to_i %>   Rating: <%= wig.rating %></p>
+    <p>Price per day: <%= wig.price_per_day.to_i %></p>
     </div>
   <% end %>
 </div>
