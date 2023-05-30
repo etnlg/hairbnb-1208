@@ -23,18 +23,9 @@
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
 
-// .btn {
-//   position: relative;
-//   top: -19px;
-//   left: 300px;
-//   background-color: rgba(106, 150, 100, 0.893);
-//   border-radius: 5px;
-//   box-shadow: 1px 1px 2px;
-// }
-
-
 .footer {
-  background: #F4F4F4;
+
+  background: white;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -84,6 +75,47 @@
   margin-left: 10px;
 }
 
+.container-cards {
+  background-color: white;
+  width: 75%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  padding-bottom: 20px;
+}
+
+.cards .eachcards {
+  width: 250px;
+  height: 350px;
+  border-color: rgb(171, 168, 168);
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px;
+  background-color:  rgba(106, 150, 100, 0.638) ;
+
+}
+
+.eachcards:hover {
+  transform: scale(110%);
+  transition: all ease-in 200ms;
+  box-shadow: 1px 1px 20px 1px black;
+}
+.cards a {
+  text-decoration: none;
+  color: black;
+}
+
+
+
+.text-center {
+  padding-top: 30px;
+}
 // .red-border {
 //   border: 1px solid red;
 // }
