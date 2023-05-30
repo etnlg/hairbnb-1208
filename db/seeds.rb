@@ -24,8 +24,7 @@ puts "creating 100 users and wigs"
   wig.user_id = user.id.to_i
   wig.title = Faker::Book.title
   wig.description = Faker::Quotes::Chiquito.sentence
-  wig.rating = rand(5..50)/10.0
-  wig.price_per_day = (wig.rating**5).round
+  wig.price_per_day = rand(100..2000)
   wig.location = Faker::Movies::HarryPotter.location
   wig.save!
 }
