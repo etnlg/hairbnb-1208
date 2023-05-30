@@ -23,18 +23,15 @@
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
 
-.btn {
-  position: relative;
-  top: -19px;
-  left: 300px;
-  background-color: rgba(106, 150, 100, 0.893);
-  border-radius: 5px;
-  box-shadow: 1px 1px 2px;
-}
+// .btn {
+//   position: relative;
+//   top: -19px;
+//   left: 300px;
+//   background-color: rgba(106, 150, 100, 0.893);
+//   border-radius: 5px;
+//   box-shadow: 1px 1px 2px;
+// }
 
-.btn:hover {
-  background-color: rgba(209, 209, 209, 0.633);
-}
 
 .footer {
   background: #F4F4F4;
@@ -63,3 +60,30 @@
 .footer .fa-heart {
   color: #D23333;
 }
+
+.form {
+  color: white;
+  position: relative;
+  top: -19px;
+  left: 245px;
+  width: 240px;
+}
+
+.form .btn {
+  background-color: rgba(106, 150, 100, 0.893);
+  border-radius: 5px;
+  box-shadow: 1px 1px 2px;
+  width: 90%;
+}
+
+.form .btn:hover {
+  background-color: rgba(209, 209, 209, 0.633);
+}
+
+.form .input {
+  margin-left: 10px;
+}
+
+// .red-border {
+//   border: 1px solid red;
+// }
