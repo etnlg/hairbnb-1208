@@ -6,6 +6,13 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
+puts "Destroying everything"
+
+Wig.destroy_all
+User.destroy_all
+
+puts "creating 100 users and wigs"
+
 100.times {
   user = User.new
   user.first_name = Faker::Name.first_name
@@ -17,7 +24,9 @@
   wig.user_id = user.id.to_i
   wig.title = Faker::Book.title
   wig.description = Faker::Quotes::Chiquito.sentence
-  wig.price_per_day = rand(50..350)
+  wig.price_per_day = rand(100..2000)
   wig.location = Faker::Movies::HarryPotter.location
   wig.save!
 }
+
+puts "Done"
