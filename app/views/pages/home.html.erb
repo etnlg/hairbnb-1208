@@ -1,13 +1,35 @@
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),
- url(<%= image_path('homebaldman.jpeg')%>)">
+     url(<%= image_path('homebaldman.jpeg')%>)">
   <div class="container">
     <h1>Hairbnb, the solution to feel <br> sexy again!</h1>
-    <p></p>
-    <a class="btn" href="#">Check the Wigs</a>
+    <div class="form ">
+      <form action="">
+        <div class = "d-flex justify-content-end mb-1">
+          <input placeholder="Where ?" type="location" name="location" id="location">
+        </div>
+        <div class = "d-flex justify-content-end mb-1" >
+          <div class = "m-1">
+            <label for="date">Wig in: </label>
+          </div>
+          <input type="date" name="date" id="date">
+        </div>
+        <div class = "d-flex justify-content-end mb-1">
+          <div class = "m-1">
+            <label for="date">Wig out:</label>
+          </div>
+          <input type="date" name="date" id="date">
+        </div>
+        <div class="d-flex justify-content-end red-border">
+          <input class="btn" name="commit" type="submit" value="search" data-disable-with="Search" />
+        </div>
+      </form>
+    </div>
   </div>
 </div>
 
+
 <h1 class = "text-center mt-4">Our top 10 best Wigs</h1>
+
 
 
 
