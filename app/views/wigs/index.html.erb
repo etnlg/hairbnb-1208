@@ -3,12 +3,15 @@
     <h1>Discover all our wigs!</h1>
   </div>
   <% @wigs.each do |wig| %>
-    <div class = "bg-white p-2 m-3 rounded shadow">
-    <h2><%= wig.title %></h2>
-    <p><%= wig.description %></p>
-    <p><%= wig.price_per_day %></p>
-    <p><%= wig.location %></p>
-    <%= link_to "More info about this wig", wig_path(wig) %>
+    <div class = "div-card">
+      <%= link_to wig_path(wig) do %>
+        <div class = "bg-white p-2 my-3 rounded shadow">
+          <h2 class = title><strong><%= wig.title %></strong></h2>
+          <p class = description><%= wig.description %></p>
+          <p class = location><%= wig.location %></p>
+          <p class = price><strong><%= wig.price_per_day %> EUR</strong> day</p>
+        </div>
+      <% end %>
     </div>
   <% end %>
 </div>
