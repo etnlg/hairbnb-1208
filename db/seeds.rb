@@ -13,12 +13,12 @@ User.destroy_all
 
 puts "creating 100 users and wigs"
 
-100.times {
+20.times {
   user = User.new
-  user.first_name = Faker::Name.first_name
-  user.last_name = Faker::Name.last_name
-  user.email = Faker::Internet.email(name: user.first_name)
-  user.password = Faker::Internet.password(min_length: 8)
+  user.first_name = ('a'..'z').to_a.shuffle[0] + ('a'..'z').to_a.shuffle[0]+ Faker::Name.first_name
+  user.last_name = ('a'..'z').to_a.shuffle[0]+ ('a'..'z').to_a.shuffle[0] + Faker::Name.last_name
+  user.email = ('a'..'z').to_a.shuffle[0] + ('a'..'z').to_a.shuffle[0] +Faker::Internet.email(name: user.first_name)
+  user.password = ('a'..'z').to_a.shuffle[0] + ('a'..'z').to_a.shuffle[0] + Faker::Internet.password(min_length: 8)
   user.save!
   wig = Wig.new
   wig.user_id = user.id.to_i
