@@ -19,6 +19,22 @@ class WigsController < ApplicationController
     redirect_to wig_path(@wig)
   end
 
+  def edit
+    @wig = Wig.find(params[:id])
+  end
+
+  def update
+    @wig = Wig.find(params[:id])
+    @wig = Wig.update(wig_params)
+    redirect_to wig_path(@wig)
+  end
+
+  def destroy
+    @wig = Wig.find(params[:id])
+    @wig.destroy
+    redirect_to wigs_path, status: :see_other
+  end
+
   private
 
   def wig_params
