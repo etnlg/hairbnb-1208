@@ -7,9 +7,17 @@
   </div>
 </div>
 
-<h1 class = "text-center mt-4">Our top 10 best Wigs</h1>
+<h1 class = "text-center mt-4">Our top 5 best Wigs</h1>
 
-
+<div class = 'container'>
+  <% @wigs.each do |wig| %>
+    <div class = "m-2 p-2 bg-white shadow rounded">
+    <p><%= wig.title %></p>
+    <p><%= wig.description %></p>
+    <p>Price per day: <%= wig.price_per_day.to_i %>   Rating: <%= wig.rating %></p>
+    </div>
+  <% end %>
+</div>
 
 
 
