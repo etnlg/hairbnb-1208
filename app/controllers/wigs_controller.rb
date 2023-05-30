@@ -15,7 +15,7 @@ class WigsController < ApplicationController
   def create
     @wig = Wig.new(wig_params)
     @wig.user_id = current_user.id
-    @wig.save
+    @wig.save!
     redirect_to wig_path(@wig)
   end
 
@@ -25,7 +25,7 @@ class WigsController < ApplicationController
 
   def update
     @wig = Wig.find(params[:id])
-    @wig = Wig.update(wig_params)
+    @wig.update(wig_params)
     redirect_to wig_path(@wig)
   end
 
