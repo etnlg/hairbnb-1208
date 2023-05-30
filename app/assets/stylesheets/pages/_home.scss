@@ -9,7 +9,7 @@
 .banner h1 {
   position: relative;
   top: -100px;
-  left: 50px;
+  left: 145px;
   color: white;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   font-size: 32px;
@@ -24,7 +24,6 @@
 }
 
 .footer {
-
   background: white;
   display: flex;
   align-items: center;
@@ -56,7 +55,7 @@
   color: white;
   position: relative;
   top: -19px;
-  left: 245px;
+  left: 320px;
   width: 240px;
 }
 
@@ -101,7 +100,17 @@
 
 }
 
-.eachcards:hover {
+.cardshome {
+  width: 250px;
+  height: 450px;
+  position: relative;
+  background-color: rgba(238, 238, 238, 0.663);
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 2px;
+}
+
+.cardshome:hover {
   transform: scale(110%);
   transition: all ease-in 200ms;
   box-shadow: 1px 1px 20px 1px black;
