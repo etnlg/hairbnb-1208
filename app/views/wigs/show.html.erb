@@ -13,4 +13,13 @@
       <p><strong>Price for location per day</strong></p>
       <h5><%= @wig.price_per_day.to_i %> EUR</h5>
     </div>
+  </div>
+  <div>
+  <%= link_to "Go back to search", wigs_path %>
+  <%= link_to "Update wig", edit_wig_path %>
+  <%= link_to "Delete wig",
+    wig_path(@wig),
+    data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+  %>
+  </div>
 </div>
