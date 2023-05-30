@@ -4,10 +4,10 @@
        <%= image_tag "hairbnb-log-08.png" %>
     <% end %>
 
-      <div class = "d-flex justify-content-center mt-1" >
+      <div class = "d-flex justify-content-center" >
         <p class="btn-discover"><%= link_to "Discover all the wigs available", wigs_path %></p>
         <div>
-           <p class="btn-discover"><%= link_to "Wig's owner", wigs_path %></p>
+           <p class="btn-discover"><%= link_to "Owner mode", bookings_path %></p>
         </div>
       </div>
 
@@ -18,9 +18,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>
-          <li class="nav-item active">
-            <%= link_to "Home", root_path, class: "nav-link" %>
-          </li>
+
           <li class="nav-item">
             <%= link_to "Messages", "#", class: "nav-link" %>
           </li>
