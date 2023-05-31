@@ -9,6 +9,9 @@ class BookingsController < ApplicationController
     @bookings = Booking.where(user_id: current_user.id)
   end
 
+  def choice
+  end
+
   def create
     @booking = Booking.new(booking_params)
     @booking.user_id = current_user.id
