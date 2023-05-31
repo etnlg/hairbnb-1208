@@ -2,12 +2,12 @@
   display: flex;
 }
 
-.container {
-  display: flex;
+.wigs-container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 250px 250px 250px;
   grid-gap: 16px;
   flex-grow: 1;
+  margin-left: 10px;
 }
 
 
@@ -17,10 +17,11 @@
   position: sticky;
   top: 0;
   right: 0;
+  margin-left: 10px;
 }
 
 .div-card {
-  width: 250px;
+  // width: 250px;
   height: 450px;
 }
 
