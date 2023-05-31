@@ -23,13 +23,19 @@ class WigsController < ApplicationController
   def by_location
     @location = params[:location]
     @wigs = Wig.near(@location, 20)
+    @markers = @wigs.geocoded.map do |flat|
+      {
+        lat: flat.latitude,
+        lng: flat.longitude
+      }
+    end
   end
 
   def create
     @wig = Wig.new(wig_params)
     @wig.user_id = current_user.id
     @wig.save!
-    redirect_to wig_path(@wig)
+    redirect_to root_path
   end
 
   def edit
