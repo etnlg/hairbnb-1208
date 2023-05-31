@@ -1,28 +1,68 @@
 <div class = "containerreservation m-5">
-  <h3>Have a look at the:</h3>
-  <h2>🪮 <%= @wig.title %> 🪮</h2>
-  <div class = "m-5 bg-white">
-    <p>This</p>
-    <p>is</p>
-    <p>a</p>
-    <p>Picture</p>
-  </div>
-  <p><%= @wig.description %></p>
-  <div>
-    <div class = "m-3">
-      <p><strong>Price for location per day</strong></p>
-      <h5><%= @wig.price_per_day.to_i %> EUR</h5>
+    <div class="main-container-reservation col-lg-8">
+      <h3>Have a look at the:</h3>
+      <h2> <%= @wig.title %> </h2>
+      <div class = "m-5 bg-white">
+        <p>This</p>
+        <p>is</p>
+        <p>a</p>
+        <p>Picture</p>
+        <p>This</p>
+        <p>is</p>
+        <p>a</p>
+        <p>Picture</p>
+        <p>This</p>
+        <p>is</p>
+        <p>a</p>
+        <p>Picture</p>
+        <p>This</p>
+        <p>is</p>
+        <p>a</p>
+        <p>Picture</p>
+      </div>
+      <p><%= @wig.description %></p>
+      <div>
+        <div class = "m-3">
+          <p><strong>Price for location per day</strong></p>
+          <h5><%= @wig.price_per_day.to_i %> EUR</h5>
+        </div>
+      </div>
     </div>
-  </div>
-    <div class="btn-reservation">
-      <%= link_to 'Reservation', wigs_path %>
-    </div>
-  <div class = link-div>
-    <%= link_to "Go back to search", wigs_path %>
 
-  </div>
+
+    <div class="formreservation">
+      <form action="">
+        <div class = "d-flex justify-content-end mb-1">
+          <input placeholder="Where ?" type="location" name="location" id="location">
+        </div>
+        <div class = "d-flex justify-content-end mb-1" >
+          <div class = "m-1">
+            <label for="date">Wig in: </label>
+          </div>
+          <input type="date" name="date" id="date">
+        </div>
+        <div class = "d-flex justify-content-end mb-1">
+          <div class = "m-1">
+            <label for="date">Wig out:</label>
+          </div>
+          <input type="date" name="date" id="date">
+        </div>
+        <div class="d-flex justify-content-end">
+          <%= link_to 'reservation', booking_client_path, class: "btnreservation" %>
+        </div>
+      </form>
+    </div>
 </div>
 
+    <div class = link-div>
+      <%= link_to "Go back to search", wigs_path %>
+    </div>
 
 
-<%# booking_client_path %>
+    <%# <div class="btnshow"> %>
+      <%# <%= link_to booking_client_path do %>
+        <%# <div class="btn-reservation"> %>
+          <%# Reservation %>
+        <%# </div> %>
+      <%# <% end %>
+    <%# </div> %>

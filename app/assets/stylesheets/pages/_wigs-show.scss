@@ -1,26 +1,59 @@
 .containerreservation {
   text-align: center;
+  display: flex;
 }
 
-.btn-reservation {
+
+
+.formreservation {
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 1px 1px 2px;
+  height: 250px;
+  width: 350px;
+  position: sticky;
+  top: 0;
+  right: 0;
+  margin-left: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 130px;
-  height: 60px;
-  background-color: rgba(106, 150, 100, 0.893);
-  border-radius: 5px;
-  box-shadow: 1px 1px 2px;
+  position: sticky;
+  top: 0;
+  right: 0;
+  margin-left: 10px;
 }
 
-.btn-reservation a {
+.btnreservation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  width: 130px;
+  height: 50px;
+  background-color: rgba(147, 168, 144, 0.893);
+  border-radius: 5px;
+  box-shadow: 1px 1px 2px;
+  color: black;
+}
+
+.d-flex a {
   text-decoration: none;
+  color: black;
+}
+
+.btnreservation:hover {
+  transform: scale(110%);
+  transition: all ease-in 200ms;
+  box-shadow: 1px 1px 20px 1px black;
   color: black;
 
 }
 
 
+
 .link-div a {
+  text-align: center;
   text-decoration: none;
   color: rgb(34, 34, 34);
 }

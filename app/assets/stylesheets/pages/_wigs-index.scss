@@ -1,20 +1,26 @@
 .main-container{
   display: flex;
+  margin: auto;
 }
 
 .wigs-container {
   display: grid;
   grid-template-columns: 250px 250px 250px;
   grid-gap: 16px;
-  flex-grow: 1;
   margin-left: 10px;
 }
 
 
 .map {
-  height: 600px;
-  width: 470px;
+  flex-grow: 1;
+  flex-shrink: 1;
+  // height: 600px;
+  // width: 470px;
+}
+
+.map img {
   position: sticky;
+  width:100%;
   top: 0;
   right: 0;
   margin-left: 10px;
