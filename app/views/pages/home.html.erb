@@ -3,7 +3,7 @@
   <div class="containerhome">
     <h1>Hairbnb, the solution to feel <br> sexy again!</h1>
     <div class="form ">
-      <form action="">
+      <form action= "/location">
         <div class = "d-flex justify-content-end mb-1">
           <input placeholder="Where ?" type="location" name="location" id="location">
         </div>
@@ -20,7 +20,7 @@
           <input type="date" name="date" id="date">
         </div>
         <div class="d-flex justify-content-end red-border">
-          <%= link_to 'Search →', wigs_path, class: "btn" %>
+          <%= link_to 'Search →', by_location_path, class: "btn" %>
         </div>
       </form>
     </div>
