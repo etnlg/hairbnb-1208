@@ -29,25 +29,20 @@
       </div>
     </div>
 
-
     <div class="formreservation">
-      <form action="">
-        <div class = "d-flex justify-content-end mb-4" >
-          <div class = "m-1">
-            <label for="date">Wig in: </label>
-          </div>
-          <input type="date" name="date" id="date">
+      <%= form_with model: [@wig, @booking] do |f| %>
+        <div class = "d-flex justify-content-end mb-1">
+          <%= f.label :start_date %>
+          <%= f.date_field :start_date %>
         </div>
-        <div class = "d-flex justify-content-end mb-4">
-          <div class = "m-1">
-            <label for="date">Wig out:</label>
-          </div>
-          <input type="date" name="date" id="date">
+        <div class = "d-flex justify-content-end mb-1">
+          <%= f.label :end_date %>
+          <%= f.date_field :end_date%>
         </div>
         <div class="d-flex justify-content-end">
-          <%= link_to 'reservation', booking_client_path, class: "btnreservation" %>
+          <%= f.submit%>
         </div>
-      </form>
+      <% end %>
     </div>
 </div>
 
