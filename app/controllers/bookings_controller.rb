@@ -6,7 +6,7 @@ class BookingsController < ApplicationController
   end
 
   def client
-    wigs = Wig.where()
+    @bookings = Booking.where(user_id: current_user.id)
   end
 
   def accept
