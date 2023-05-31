@@ -1,0 +1,14 @@
+<div class = "d-flex justify-content-center">
+  <h2>All the wigs in <%= @location %>!<h2>
+</div>
+
+<div>
+  <% @wigs.each do |wig| %>
+    <div class = "m-2 p-2 bg-white shadow rounded">
+    <h4><%= wig.title %></h4>
+    <p><%= wig.description %></p>
+    <p><strong>Price per day: </strong> <%= wig.price_per_day.to_i %> EUR</p>
+    </div>
+  <% end %>
+
+</div>
