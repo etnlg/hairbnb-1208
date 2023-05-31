@@ -12,15 +12,21 @@
 }
 
 .btn-discover {
-
   margin: auto;
+}
 
-  a {
-    text-decoration: none;
-    color: #6c757d;
-    margin-left: 300px;
+.btn-discover a:hover{
+  color: black;
+}
 
-  }
+.nav-item a:hover{
+  color: black;
+}
+
+.btn-discover a {
+  text-decoration: none;
+  color: #6c757d;
+  margin-left: 300px;
 }
 
 .navbar-nav {
