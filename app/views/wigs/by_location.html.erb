@@ -6,9 +6,11 @@
   <div class = "col-5">
     <% @wigs.each do |wig| %>
       <div class = "card-by-loc">
-        <h4><%= wig.title %></h4>
-        <p><%= wig.description %></p>
-        <p><strong>Price per day: </strong> <%= wig.price_per_day.to_i %> EUR</p>
+        <%= link_to wig_path(wig) do %>
+          <h4><strong><%= wig.title.capitalize %></strong></h4>
+          <p><%= wig.description %></p>
+          <p>Price per day: <strong><%= wig.price_per_day.to_i %> EUR</strong></p>
+        <% end %>
       </div>
     <% end %>
   </div>
