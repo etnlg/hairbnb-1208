@@ -1,4 +1,4 @@
-<div class = "text-center m-5">
+<div class = "containerreservation m-5">
   <h3>Have a look at the:</h3>
   <h2>🪮 <%= @wig.title %> 🪮</h2>
   <div class = "m-5 bg-white">
@@ -14,8 +14,15 @@
       <h5><%= @wig.price_per_day.to_i %> EUR</h5>
     </div>
   </div>
+    <div class="btn-reservation">
+      <%= link_to 'Reservation', wigs_path %>
+    </div>
   <div class = link-div>
     <%= link_to "Go back to search", wigs_path %>
 
   </div>
 </div>
+
+
+
+<%# booking_client_path %>
