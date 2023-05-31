@@ -3,8 +3,8 @@
   </div>
 
 <div class="main-container">
-  <div class="container">
-    <div class="containercards"></div>
+  <div class="d-flex">
+    <div class="wigs-container">
       <% @wigs.each do |wig| %>
         <div class = "div-card">
           <%= link_to wig_path(wig) do %>

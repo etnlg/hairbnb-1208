@@ -1,3 +1,25 @@
+.containerreservation {
+  text-align: center;
+}
+
+.btn-reservation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 130px;
+  height: 60px;
+  background-color: rgba(106, 150, 100, 0.893);
+  border-radius: 5px;
+  box-shadow: 1px 1px 2px;
+}
+
+.btn-reservation a {
+  text-decoration: none;
+  color: black;
+
+}
+
+
 .link-div a {
   text-decoration: none;
   color: rgb(34, 34, 34);
