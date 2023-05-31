@@ -11,7 +11,7 @@ puts "Destroying everything"
 Wig.destroy_all
 User.destroy_all
 
-puts "creating 100 users and wigs"
+puts "creating 20 users and wigs"
 
 20.times {
   user = User.new
@@ -20,13 +20,38 @@ puts "creating 100 users and wigs"
   user.email = ('a'..'z').to_a.shuffle[0] + ('a'..'z').to_a.shuffle[0] +Faker::Internet.email(name: user.first_name)
   user.password = ('a'..'z').to_a.shuffle[0] + ('a'..'z').to_a.shuffle[0] + Faker::Internet.password(min_length: 8)
   user.save!
-  wig = Wig.new
-  wig.user_id = user.id.to_i
-  wig.title = Faker::Book.title
-  wig.description = Faker::Quotes::Chiquito.sentence
-  wig.price_per_day = rand(100..2000)
-  wig.location = Faker::Movies::HarryPotter.location
-  wig.save!
+  # wig = Wig.new
+  # wig.user_id = user.id.to_i
+  # wig.title = Faker::Book.title
+  # wig.description = Faker::Quotes::Chiquito.sentence
+  # wig.price_per_day = rand(100..2000)
+  # wig.location = Faker::Movies::HarryPotter.location
+  # wig.save!
 }
+
+Wig.create(title: "Wig 1", user_id: User.all.sample.id, description: "Very cool wig", price_per_day: rand(1..40), location: "Montreal")
+Wig.create(title: "Wig 2", user_id: User.all.sample.id, description: "Very cool wig", price_per_day: rand(1..40), location: "Montreal")
+Wig.create(title: "Wig 3", user_id: User.all.sample.id, description: "Very cool wig", price_per_day: rand(1..40), location: "Montreal")
+Wig.create(title: "Wig 4", user_id: User.all.sample.id, description: "Very cool wig", price_per_day: rand(1..40), location: "Montreal")
+Wig.create(title: "Wig 5", user_id: User.all.sample.id, description: "Very cool wig", price_per_day: rand(1..40), location: "Montreal")
+Wig.create(title: "Wig 6", user_id: User.all.sample.id, description: "Very cool wig", price_per_day: rand(1..40), location: "Montreal")
+Wig.create(title: "Wig 7", user_id: User.all.sample.id, description: "Very cool wig", price_per_day: rand(1..40), location: "Montreal")
+Wig.create(title: "Wig 8", user_id: User.all.sample.id, description: "Very cool wig", price_per_day: rand(1..40), location: "Montreal")
+Wig.create(title: "Wig 9", user_id: User.all.sample.id, description: "Very cool wig", price_per_day: rand(1..40), location: "Montreal")
+Wig.create(title: "Wig 10", user_id: User.all.sample.id, description: "Very cool wig", price_per_day: rand(1..40), location: "Montreal")
+Wig.create(title: "Wig 11", user_id: User.all.sample.id, description: "Very cool wig", price_per_day: rand(1..40), location: "Montreal")
+Wig.create(title: "Wig 12", user_id: User.all.sample.id, description: "Very cool wig", price_per_day: rand(1..40), location: "Montreal")
+Wig.create(title: "Wig 13", user_id: User.all.sample.id, description: "Very cool wig", price_per_day: rand(1..40), location: "Montreal")
+Wig.create(title: "Wig 14", user_id: User.all.sample.id, description: "Very cool wig", price_per_day: rand(1..40), location: "Montreal")
+Wig.create(title: "Wig 15", user_id: User.all.sample.id, description: "Very cool wig", price_per_day: rand(1..40), location: "Montreal")
+Wig.create(title: "Wig 16", user_id: User.all.sample.id, description: "Very cool wig", price_per_day: rand(1..40), location: "Montreal")
+Wig.create(title: "Wig 17", user_id: User.all.sample.id, description: "Very cool wig", price_per_day: rand(1..40), location: "Montreal")
+Wig.create(title: "Wig 18", user_id: User.all.sample.id, description: "Very cool wig", price_per_day: rand(1..40), location: "Montreal")
+Wig.create(title: "Wig 19", user_id: User.all.sample.id, description: "Very cool wig", price_per_day: rand(1..40), location: "Montreal")
+Wig.create(title: "Wig 20", user_id: User.all.sample.id, description: "Very cool wig", price_per_day: rand(1..40), location: "Montreal")
+
+
+
+
 
 puts "Done"
