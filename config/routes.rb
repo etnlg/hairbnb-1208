@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get "location", to: "wigs#by_location", as: :by_location
   get "bookings/client", to: "bookings#client", as: :booking_client
   get "bookings/owner", to: "bookings#owner", as: :booking_owner
+  get "bookings/choice", to: "bookings#choice", as: :booking_choice
   # resources :bookings, only: [:new, :create, :show, :destroy]
   patch "bookings/:id", to: "bookings#accept", as: :accept
   patch "bookings/:id", to: "bookings#decline", as: :decline
