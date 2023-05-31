@@ -2,8 +2,7 @@
     <h1>Discover all the wigs!</h1>
   </div>
 
-<div class="main-container">
-  <div class="d-flex">
+<div class="main-container d-flex">
     <div class="wigs-container">
       <% @wigs.each do |wig| %>
         <div class = "div-card">
@@ -22,6 +21,7 @@
         </div>
       <% end %>
     </div>
-    <%= image_tag "https://kitt.lewagon.com/placeholder/users/krokrob", class: "map"%>
-  </div>
+    <div class="map">
+      <%= image_tag "https://kitt.lewagon.com/placeholder/users/krokrob"%>
+    </div>
 </div>
