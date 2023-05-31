@@ -57,6 +57,7 @@
   top: -19px;
   left: 320px;
   width: 240px;
+
 }
 
 .form .btn {
@@ -64,7 +65,21 @@
   border-radius: 5px;
   box-shadow: 1px 1px 2px;
   width: 90%;
+  flex-grow: 1;
+  flex-shrink: 1;
 }
+
+.form .input-home {
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+.form #location {
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+
 
 .form .btn:hover {
   background-color: rgba(209, 209, 209, 0.633);
