@@ -2,6 +2,13 @@ class WigsController < ApplicationController
 
   def index
     @wigs = Wig.all
+
+    @markers = @wigs.geocoded.map do |flat|
+      {
+        lat: flat.latitude,
+        lng: flat.longitude
+      }
+    end
   end
 
   def show
@@ -10,6 +17,11 @@ class WigsController < ApplicationController
 
   def new
     @wig = Wig.new
+  end
+
+  def by_location
+    @location = params[:location]
+    @wigs = Wig.near(@location, 20)
   end
 
   def create
