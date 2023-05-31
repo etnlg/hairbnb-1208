@@ -1,6 +1,6 @@
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),
      url(<%= image_path('homebaldman.jpeg')%>)">
-  <div class="container">
+  <div class="containerhome">
     <h1>Hairbnb, the solution to feel <br> sexy again!</h1>
     <div class="form ">
       <form action="">
@@ -29,16 +29,23 @@
 
 <div class="container-cards">
 
-  <h2 class = "text-center">Our top 5 best Wigs</h2>
+  <h2 class = "text-center">Top 5 best Wigs</h2>
 
   <div class = "cards">
     <% @wigs.each do |wig| %>
       <%= link_to wig_path(wig) do %>
-        <div class = "eachcards col-6 shadow ">
-          <h2><strong><%= wig.title %></strong></h2>
-          <p><%= wig.description %></p>
-          <p><strong><%= wig.price_per_day.to_i %> EUR</strong> day</p>
-        </div>
+
+          <div class = "cardshome p-3 ">
+              <%= image_tag "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg", class: "card-image" %>
+              <h3 class = title><strong><%= wig.title %></strong></h3>
+              <p class = description><%= wig.description %></p>
+              <p class = location><%= wig.location %></p>
+              <p class = price><strong><%= wig.price_per_day %> EUR</strong> day</p>
+              <div class="avatar-container">
+                <%= image_tag "https://kitt.lewagon.com/placeholder/users/krokrob", class: "avatar" %>
+              </div>
+          </div>
+
       <% end %>
     <% end %>
   </div>

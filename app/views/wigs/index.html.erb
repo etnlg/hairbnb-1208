@@ -1,17 +1,27 @@
-<div class = "container">
-  <div class = "d-flex justify-content-center m-4">
-    <h1>Discover all our wigs!</h1>
+  <div class = "text-center m-2">
+    <h1>Discover all the wigs!</h1>
   </div>
-  <% @wigs.each do |wig| %>
-    <div class = "div-card">
-      <%= link_to wig_path(wig) do %>
-        <div class = "bg-white p-2 my-3 rounded shadow">
-          <h2 class = title><strong><%= wig.title %></strong></h2>
-          <p class = description><%= wig.description %></p>
-          <p class = location><%= wig.location %></p>
-          <p class = price><strong><%= wig.price_per_day %> EUR</strong> day</p>
+
+<div class="main-container">
+  <div class="container">
+    <div class="containercards"></div>
+      <% @wigs.each do |wig| %>
+        <div class = "div-card">
+          <%= link_to wig_path(wig) do %>
+            <div class = "insidecard bg-white p-3 ">
+              <%= image_tag "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg", class: "card-image" %>
+              <h3 class = title><strong><%= wig.title %></strong></h3>
+              <p class = description><%= wig.description %></p>
+              <p class = location><%= wig.location %></p>
+              <p class = price><strong><%= wig.price_per_day %> EUR</strong> day</p>
+              <div class="avatar-container">
+                <%= image_tag "https://kitt.lewagon.com/placeholder/users/krokrob", class: "avatar" %>
+              </div>
+            </div>
+          <% end %>
         </div>
       <% end %>
     </div>
-  <% end %>
+    <%= image_tag "https://kitt.lewagon.com/placeholder/users/krokrob", class: "map"%>
+  </div>
 </div>
