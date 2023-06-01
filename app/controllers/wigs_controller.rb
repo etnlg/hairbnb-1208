@@ -3,10 +3,15 @@ class WigsController < ApplicationController
   def index
     @wigs = Wig.all
 
-    @markers = @wigs.geocoded.map do |flat|
+    number_chars = @wigs.length.to_s.chars
+    number_chars[-1] = '0'
+    number = number_chars.join.to_i
+    number <= 10 ? @display_number = "More than #{number} wigs available" : @display_number = "#{number} wigs available"
+    @markers = @wigs.geocoded.map do |wig|
       {
-        lat: flat.latitude,
-        lng: flat.longitude
+        lat: wig.latitude,
+        lng: wig.longitude,
+        info_window_html: render_to_string(partial: "info_window", locals: {wig: wig})
       }
     end
   end
@@ -23,11 +28,16 @@ class WigsController < ApplicationController
 
   def by_location
     @location = params[:location]
-    @wigs = Wig.near(@location, 20)
-    @markers = @wigs.geocoded.map do |flat|
+    @wigs = Wig.near(@location, 50)
+    number_chars = @wigs.length.to_s.chars
+    number_chars[-1] = '0'
+    number = number_chars.join.to_i
+    number >= 10 ? @display_number = "More than #{number} wigs available" : @display_number = "#{@wigs.length} wigs available"
+    @markers = @wigs.geocoded.map do |wig|
       {
-        lat: flat.latitude,
-        lng: flat.longitude
+        lat: wig.latitude,
+        lng: wig.longitude,
+        info_window_html: render_to_string(partial: "info_window", locals: {wig: wig})
       }
     end
   end
