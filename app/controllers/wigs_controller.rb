@@ -35,7 +35,7 @@ class WigsController < ApplicationController
     @wig = Wig.new(wig_params)
     @wig.user_id = current_user.id
     @wig.save!
-    redirect_to root_path
+    redirect_to wig_path(@wig)
   end
 
   def edit
