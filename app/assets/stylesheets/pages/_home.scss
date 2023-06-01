@@ -115,6 +115,26 @@
   box-shadow: 1px 1px 2px;
 }
 
+.cardsbookings {
+  width: 250px;
+  height: 800px;
+  position: relative;
+  background-color: white;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 2px;
+}
+
+.card-image-booking {
+  height: auto;
+  max-height: 210px !important;
+  max-width:100%;
+  max-height:100%;
+  display: block;
+  margin: auto;
+}
+
+
 .cardshome:hover {
   transform: scale(105%);
   transition: all ease-in-out 200ms;
@@ -128,5 +148,5 @@
 }
 
 .text-center {
-  padding-top: 30px;
+  padding-top: 5px;
 }

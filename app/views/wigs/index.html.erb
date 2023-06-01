@@ -1,5 +1,5 @@
 <div class = "text-center mb-3 h1-index">
-  <h1>Discover all our wigs</h1>
+  <h1>Discover all the wigs</h1>
 </div>
 
 <div class="main-container d-flex">
@@ -8,7 +8,7 @@
         <div class = "div-card">
           <%= link_to wig_path(wig) do %>
             <div class = "insidecard bg-white p-3 ">
-              <%= cl_image_tag wig.photo.key, crop: :fill, class: "card-image"  %>
+              <%= cl_image_tag wig.photo.key, crop: :fill, class: "card-image-all-wigs"  %>
               <h3 class = title><strong><%= wig.title %></strong></h3>
               <p class = description><%= wig.description %></p>
               <p class = location><%= wig.location %></p>

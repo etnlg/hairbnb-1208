@@ -25,22 +25,38 @@
 .map .map-geocode {
   position: sticky;
   width:100%;
-  top: 0;
+  top: 10px;
   right: 0;
   margin-left: 10px;
+  margin-top: 5px;
 }
 
 .div-card {
   // width: 250px;
-  height: 450px;
+  height: 500px;
+
 }
 
 .insidecard {
   width: 250px;
-  height: 450px;
+  height: 500px;
   position: relative;
   border-radius: 10px;
   box-shadow: 1px 1px 2px black;
+  text-align: center;
+}
+
+.insidecard h3 {
+  margin-top: 5px;
+}
+
+.card-image-all-wigs {
+  height: auto;
+  max-height: 210px !important;
+  max-width:100%;
+  max-height:100%;
+  display: block;
+  margin: auto;
 }
 
 .div-card a {
