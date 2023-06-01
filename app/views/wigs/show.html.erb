@@ -1,6 +1,6 @@
 <div class = "containerreservation m-5">
     <div class="main-container-reservation col-lg-8">
-      <h3>Have a look at the:</h3>
+      <h3>A closer look to:</h3>
       <h2> <%= @wig.title %> </h2>
       <div class = "m-5 bg-white">
         <p>This</p>
@@ -20,23 +20,32 @@
         <p>a</p>
         <p>Picture</p>
       </div>
+
+      <hr class="my-4 bg-dark">
+
       <p><%= @wig.description %></p>
+
       <div>
-        <div class = "m-3">
-          <p><strong>Price for location per day</strong></p>
-          <h5><%= @wig.price_per_day.to_i %> EUR</h5>
-        </div>
+        <hr class="my-4 bg-dark">
+          <div class = "m-3">
+            <p><strong>Renting price per day</strong></p>
+            <h5><%= @wig.price_per_day.to_i %> EUR</h5>
+          </div>
       </div>
     </div>
 
     <div class="formreservation">
       <%= form_with model: [@wig, @booking] do |f| %>
         <div class = "d-flex justify-content-end mb-4">
-          <%= f.label :wig_in %>
+          <div class="m-1 d-flex align-item-center justify-content-center">
+            <%= f.label :wig_in %>
+          </div>
           <%= f.date_field :start_date %>
         </div>
         <div class = "d-flex justify-content-end mb-4">
-          <%= f.label :wig_out %>
+          <div class="m-1 d-flex align-item-center justify-content-center">
+            <%= f.label :wig_out %>
+          </div>
           <%= f.date_field :end_date%>
         </div>
         <div class=" btnreservation d-flex justify-content-end">
@@ -46,15 +55,6 @@
     </div>
 </div>
 
-    <div class = link-div>
+    <div class = "link-div text-center">
       <%= link_to "Go back to search", wigs_path %>
     </div>
-
-
-    <%# <div class="btnshow"> %>
-      <%# <%= link_to booking_client_path do %>
-        <%# <div class="btn-reservation"> %>
-          <%# Reservation %>
-        <%# </div> %>
-      <%# <% end %>
-    <%# </div> %>
