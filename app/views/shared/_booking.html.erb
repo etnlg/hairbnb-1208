@@ -1,10 +1,14 @@
 <div class = "cards">
+
   <% @bookings.where(satuts: ["pending", "accepted"]).each do |b| %>
-    <div class = "cardsbookings p-3 ">
-      <%= cl_image_tag Wig.find(b.wig_id).photo.key, crop: :fill, class: "card-image-booking"  %>
-      <h3 class = title><strong><%= Wig.find(b.wig_id).title %></strong></h3>
-      <p class = description><%= Wig.find(b.wig_id).description%></p>
-      <p class = location><%= Wig.find(b.wig_id).location %></p>
+
+  <div>
+    <%= link_to wig_path(Wig.find(b.wig_id)) do %>
+      <div class = "cardsbookings p-3 ">
+        <%= cl_image_tag Wig.find(b.wig_id).photo.key, crop: :fill, class: "card-image-booking"  %>
+        <h3 class = title><strong><%= Wig.find(b.wig_id).title %></strong></h3>
+        <p class = description><%= Wig.find(b.wig_id).description%></p>
+        <p class = location><%= Wig.find(b.wig_id).location %></p>
 
       <hr class="my-4 bg-dark">
       <div class="cardsdate">
@@ -17,13 +21,23 @@
           <% b.satuts == "accepted" ? response = "✅ Your request has been accepted" : response = "The owner didn't give a response yet" %>
           <div class = "d-flex justify-content-center mt-2">
             <p><strong>Status:</strong><p>
-          </div>
-          <p><%= response %></p>
-        </div>
-      <div class="avatar-container">
-        <%= image_tag "https://kitt.lewagon.com/placeholder/users/krokrob", class: "avatar" %>
-      </div>
 
+
+          </div>
+
+          <div class="cardsdate m-3">
+            <% b.satuts == "accepted" ? response = "✅ Your request has been accepted" : response = "The owner didn't give a response yet" %>
+            <div class = "d-flex justify-content-center mt-2">
+              <p><strong>Status:</strong><p>
+            </div>
+            <p><%= response %></p>
+          </div>
+          <div class="avatar-container">
+            <%= image_tag "https://kitt.lewagon.com/placeholder/users/krokrob", class: "avatar" %>
+          </div>
+
+        </div>
+      <% end %>
     </div>
   <% end %>
 </div>

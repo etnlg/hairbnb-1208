@@ -13,6 +13,7 @@ class WigsController < ApplicationController
 
   def show
     @wig = Wig.find(params[:id])
+    @condition = current_user.id == @wig.user_id
     @booking = Booking.new
   end
 
@@ -35,11 +36,23 @@ class WigsController < ApplicationController
     @wig = Wig.new(wig_params)
     @wig.user_id = current_user.id
     @wig.save!
-    redirect_to root_path
+    redirect_to wig_path(@wig)
   end
 
   def edit
     @wig = Wig.find(params[:id])
+  end
+
+  def destroy
+    @wig = Wig.find(params[:id])
+    @wig.destroy
+    redirect_to root_path
+  end
+
+  def update
+    @wig = Wig.find(params[:id])
+    @wig.update(wig_params)
+    redirect_to root_path
   end
 
   private
