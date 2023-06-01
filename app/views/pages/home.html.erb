@@ -7,18 +7,25 @@
         <div class = "form-banner d-flex justify-content-end mb-1">
           <input placeholder="Where ?" type="location" name="location" id="location">
         </div>
+
         <div class = "form-banner d-flex justify-content-end mb-1" >
-          <div class = "m-1">
+          <div class = "datecalendar m-1">
             <label for="date">Wig in: </label>
           </div>
-          <input type="date" name="date" id="date" class="input-home">
+          <div class="datecalendar">
+            <input type="date" name="date" id="date" class="input-home">
+          </div>
         </div>
+
         <div class = "form-banner d-flex justify-content-end mb-1">
-          <div class = "m-1">
+          <div class = "datecalendar m-1">
             <label for="date">Wig out:</label>
           </div>
-          <input type="date" name="date" id="date" class="input-home">
+          <div class="datecalendar">
+            <input type="date" name="date" id="date" class="input-home">
+          </div>
         </div>
+
         <div class="form-banner d-flex justify-content-end red-border">
           <input type="submit" value="Search →" class="btn">
         </div>
@@ -28,39 +35,6 @@
 </div>
 
 <div class="container-cards">
-
   <h2 class = "text-center">Top 5 best Wigs</h2>
-
-  <div class = "cards">
-    <% @wigs.each do |wig| %>
-      <%= link_to wig_path(wig) do %>
-
-          <div class = "cardshome p-3 ">
-              <%= image_tag "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg", class: "card-image" %>
-              <h3 class = title><strong><%= wig.title %></strong></h3>
-              <p class = description><%= wig.description %></p>
-              <p class = location><%= wig.location %></p>
-              <p class = price><strong><%= wig.price_per_day %> EUR</strong> day</p>
-              <div class="avatar-container">
-                <%= image_tag "https://kitt.lewagon.com/placeholder/users/krokrob", class: "avatar" %>
-              </div>
-          </div>
-
-      <% end %>
-    <% end %>
-  </div>
-</div>
-
-
-
-
-<div class="footer mt-1">
-  <div class="footer-links">
-    <a href="#"><i class="fab fa-instagram"></i></a>
-    <a href="#"><i class="fab fa-facebook"></i></a>
-    <a href="#"><i class="fab fa-twitter"></i></a>
-  </div>
-  <div class="footer-copyright">
-    This website is made with <i class="fas fa-heart"></i> at Le Wagon by Etienne, Florian and William
-  </div>
+  <%= render partial: 'shared/cards' %>
 </div>

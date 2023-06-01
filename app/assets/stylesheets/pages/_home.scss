@@ -58,12 +58,19 @@
   left: 320px;
   width: 240px;
 }
+#location {
+  width: 100%;
+}
+
+.form-banner .datecalendar {
+  width: 100%;
+}
 
 .form .btn {
   background-color: rgba(106, 150, 100, 0.893);
   border-radius: 5px;
   box-shadow: 1px 1px 2px;
-  width: 90%;
+  width: 100%;
 }
 
 .form .btn:hover {
@@ -92,6 +99,10 @@
   padding: 0;
   padding-bottom: 20px;
   gap: 70px;
+}
+
+.cards-by-loc .cards {
+  gap: 10px;
 }
 
 .cardshome {

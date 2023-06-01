@@ -13,7 +13,7 @@
         <hr class="my-4 bg-dark">
           <div class = "m-3">
             <p><strong>Renting price per day</strong></p>
-            <h5><%= @wig.price_per_day.to_i %> EUR</h5>
+            <h5><%= @wig.price_per_day.to_i %> CAD</h5>
           </div>
       </div>
     </div>
@@ -33,7 +33,7 @@
           <%= f.date_field :end_date%>
         </div>
         <div class=" btnreservation d-flex justify-content-end">
-          <%= f.submit class: "btnreservation" %>
+          <%= f.submit "Book", class: "btnreservation" %>
         </div>
       <% end %>
     </div>
