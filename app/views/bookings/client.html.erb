@@ -1,23 +1,8 @@
 <div class = "container">
   <div class = "d-flex justify-content-center m-5">
-    <h1>🪮💈 Here are your bookings! 🪮💈<h1>
+    <h1>Your bookings<h1>
   </div>
 
-  <% @bookings.each do |b| %>
-    <div clas = "container">
-      <div class = "d-flex justify-content-between bg-white shadow rounded p-3 m-3 ">
-        <div>
-          <h3><%= Wig.find(b.wig_id).title %><h3>
-          <p><%= Wig.find(b.wig_id).description %></p>
-        </div>
-        <div>
-          <h4><strong>From: </strong><%= b.start_date %></h4>
-          <h4><strong>Until: </strong><%= b.end_date %></h4>
-        </div>
-        <div>
-          <p> THIS IS A PICTURE </p>
-        </div>
-      </div>
-    </div>
-  <% end %>
+  <%= render partial: 'shared/booking' %>
+
 </div>

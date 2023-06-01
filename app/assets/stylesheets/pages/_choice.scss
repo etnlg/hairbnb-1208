@@ -1,0 +1,32 @@
+.ownercontainer {
+  gap: 200px;
+}
+
+.ownercreate {
+  background-color: white;
+
+}
+
+.ownercreate a {
+  text-decoration: none;
+  color: black;
+  background-color: rgba(106, 150, 100, 0.893);
+  border-radius: 5px;
+  box-shadow: 1px 1px 2px;
+  padding: 8px;
+}
+
+.ownercreate a:hover {
+  transform: scale(105%);
+  transition: all ease-in-out 200ms;
+  box-shadow: 1px 1px 10px 1px rgba(76, 76, 76, 0.585);
+  color: black;
+}
+
+.text-center p {
+  display: flex;
+  flex-direction: column;
+  // // justify-content: center;
+  // // align-items: center;
+  height: 100vh;
+}
