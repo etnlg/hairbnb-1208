@@ -1,24 +1,8 @@
 <div class = "containerreservation m-5">
     <div class="main-container-reservation col-lg-8">
-      <h3>A closer look to:</h3>
       <h2> <%= @wig.title %> </h2>
       <div class = "m-5 bg-white">
-        <p>This</p>
-        <p>is</p>
-        <p>a</p>
-        <p>Picture</p>
-        <p>This</p>
-        <p>is</p>
-        <p>a</p>
-        <p>Picture</p>
-        <p>This</p>
-        <p>is</p>
-        <p>a</p>
-        <p>Picture</p>
-        <p>This</p>
-        <p>is</p>
-        <p>a</p>
-        <p>Picture</p>
+        <%= cl_image_tag @wig.photo.key, crop: :fill%>
       </div>
 
       <hr class="my-4 bg-dark">

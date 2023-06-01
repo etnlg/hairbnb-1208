@@ -45,6 +45,6 @@ class WigsController < ApplicationController
   private
 
   def wig_params
-    params.require(:wig).permit(:title, :description, :price_per_day, :location)
+    params.require(:wig).permit(:title, :description, :price_per_day, :location, :photo)
   end
 end
