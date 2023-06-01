@@ -13,6 +13,9 @@ User.destroy_all
 
 puts "creating 20 users and wigs"
 
+@etienne = User.new(first_name: "Etienne", last_name: "Autriche", email: "etnlg@icloud.com", password: "SeedTest")
+@etienne.save!
+
 20.times {
   user = User.new
   user.first_name = ('a'..'z').to_a.shuffle[0] + ('a'..'z').to_a.shuffle[0]+ Faker::Name.first_name
@@ -48,9 +51,13 @@ Wig.create(title: "Animal Wig", user_id: User.all.sample.id, description: "Very 
 Wig.create(title: "Brown Wig", user_id: User.all.sample.id, description: "Very boring wig", price_per_day: rand(1..40), location: "834 rue rosemont")
 Wig.create(title: "Orange Wig", user_id: User.all.sample.id, description: "Very controversial wig", price_per_day: rand(1..40), location: "932 rue pie ix")
 Wig.create(title: "Purple Wig", user_id: User.all.sample.id, description: "Very inline wig", price_per_day: rand(1..40), location: "854 rue de chambly")
-Wig.create(title: "Wow Wig", user_id: User.all.sample.id, description: "Very subpar wig", price_per_day: rand(1..40), location: "342 rue william")
+@thewig = Wig.new(title: "Wow Wig", user_id: @etienne.id, description: "Very subpar wig", price_per_day: rand(1..40), location: "342 rue william")
+@thewig.save!
 
 
+8.times {
+  Booking.create(start_date: Time.new(2023, 7, 7), end_date: Time.new(2023, 7, 8), wig_id: @thewig.id, user_id: User.all.sample.id, satuts: 'pending')
+}
 
 
 
