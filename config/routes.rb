@@ -10,8 +10,8 @@ Rails.application.routes.draw do
   get "bookings/owner", to: "bookings#owner", as: :booking_owner
   get "bookings/choice", to: "bookings#choice", as: :booking_choice
   # resources :bookings, only: [:new, :create, :show, :destroy]
-  patch "bookings/:id", to: "bookings#accept", as: :accept
-  patch "bookings/:id", to: "bookings#decline", as: :decline
+  patch "bookings/:id/accept", to: "bookings#accept", as: :accept
+  patch "bookings/:id/decline", to: "bookings#decline", as: :decline
   # Defines the root path route ("/")
   # root "articles#index"
 end

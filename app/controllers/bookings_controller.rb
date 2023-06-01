@@ -14,6 +14,7 @@ class BookingsController < ApplicationController
 
   def create
     @booking = Booking.new(booking_params)
+    @booking.satuts = 'pending'
     @booking.user_id = current_user.id
     @booking.wig_id = params[:wig_id]
     @booking.save!
