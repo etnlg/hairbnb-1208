@@ -1,4 +1,4 @@
-  <div class = "text-center m-2">
+  <div class = "text-center m-2 h1-index">
     <h1>Discover all the wigs</h1>
   </div>
 
@@ -12,7 +12,7 @@
               <h3 class = title><strong><%= wig.title %></strong></h3>
               <p class = description><%= wig.description %></p>
               <p class = location><%= wig.location %></p>
-              <p class = price><strong><%= wig.price_per_day %> EUR</strong> day</p>
+              <p class = price><strong><%= wig.price_per_day.to_i %> CAD</strong> day</p>
               <div class="avatar-container">
                 <%= image_tag "https://kitt.lewagon.com/placeholder/users/krokrob", class: "avatar" %>
               </div>
