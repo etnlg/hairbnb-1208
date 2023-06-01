@@ -17,26 +17,18 @@
       </div>
 
         <div class="cardsdate m-3">
-         <hr class="my-4 bg-dark">
+          <hr class="my-4 bg-dark">
           <% b.satuts == "accepted" ? response = "✅ Your request has been accepted" : response = "The owner didn't give a response yet" %>
           <div class = "d-flex justify-content-center mt-2">
             <p><strong>Status:</strong><p>
-
-
           </div>
-
-          <div class="cardsdate m-3">
-            <% b.satuts == "accepted" ? response = "✅ Your request has been accepted" : response = "The owner didn't give a response yet" %>
-            <div class = "d-flex justify-content-center mt-2">
-              <p><strong>Status:</strong><p>
-            </div>
-            <p><%= response %></p>
-          </div>
-          <div class="avatar-container">
-            <%= image_tag "https://kitt.lewagon.com/placeholder/users/krokrob", class: "avatar" %>
-          </div>
-
+          <p><%= response %></p>
         </div>
+        <div class="avatar-container">
+          <%= image_tag "https://kitt.lewagon.com/placeholder/users/krokrob", class: "avatar" %>
+        </div>
+
+
       <% end %>
     </div>
   <% end %>

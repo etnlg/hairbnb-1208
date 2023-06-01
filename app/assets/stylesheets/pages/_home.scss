@@ -23,33 +23,6 @@
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
 
-.footer {
-  background: white;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 100px;
-  padding: 0px 50px;
-  color: rgba(0,0,0,0.3);
-}
-
-.footer-links {
-  display: flex;
-  align-items: center;
-}
-.footer-links a {
-  color: black;
-  opacity: 0.15;
-  text-decoration: none;
-  font-size: 24px;
-  padding: 0px 10px;
-}
-.footer-links a:hover {
-  opacity: 1;
-}
-.footer .fa-heart {
-  color: #D23333;
-}
 
 .form {
   color: white;
@@ -107,12 +80,13 @@
 
 .cardshome {
   width: 250px;
-  height: 450px;
+  height: 500px;
   position: relative;
   background-color: white;
   margin: 10px;
   border-radius: 10px;
   box-shadow: 1px 1px 2px;
+  text-align: center;
 }
 
 .cardsbookings {
@@ -126,6 +100,15 @@
 }
 
 .card-image-booking {
+  height: auto;
+  max-height: 210px !important;
+  max-width:100%;
+  max-height:100%;
+  display: block;
+  margin: auto;
+}
+
+.card-image-top {
   height: auto;
   max-height: 210px !important;
   max-width:100%;
