@@ -1,7 +1,7 @@
 <div class = "cards">
-  <% @bookings.each do |b| %>
+  <% @bookings.where(satuts: ["pending", "accepted"]).each do |b| %>
     <div class = "cardshome p-3 ">
-      <%= image_tag "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg", class: "card-image" %>
+      <%= cl_image_tag Wig.find(b.wig_id).photo.key, crop: :fill, class: "card-image"  %>
       <h3 class = title><strong><%= Wig.find(b.wig_id).title %></strong></h3>
       <p class = description><%= Wig.find(b.wig_id).description%></p>
       <p class = location><%= Wig.find(b.wig_id).location %></p>
@@ -12,6 +12,13 @@
         <h4><strong>Until: </strong><%= b.end_date %></h4>
       </div>
 
+        <div class="cardsdate m-3">
+          <% b.satuts == "accepted" ? response = "✅ Your request has been accepted" : response = "The owner didn't give a response yet" %>
+          <div class = "d-flex justify-content-center mt-2">
+            <p><strong>Status:</strong><p>
+          </div>
+          <p><%= response %></p>
+        </div>
       <div class="avatar-container">
         <%= image_tag "https://kitt.lewagon.com/placeholder/users/krokrob", class: "avatar" %>
       </div>
@@ -19,6 +26,7 @@
     </div>
   <% end %>
 </div>
+
 
 
 
