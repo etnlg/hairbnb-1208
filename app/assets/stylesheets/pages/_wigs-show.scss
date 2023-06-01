@@ -9,15 +9,11 @@
   box-shadow: 1px 1px 2px;
   height: 250px;
   width: 350px;
-  position: sticky;
-  top: 0;
-  right: 0;
-  margin-left: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
   position: sticky;
-  top: 10px;
+  top: 193px;
   right: 0;
   margin-left: 10px;
 }
@@ -29,8 +25,8 @@
   margin: 0 auto;
   width: 130px;
   height: 50px;
-  background-color: #ff5d628a;
-  border-color: #ff5d628a;
+  background-color: rgb(255, 128, 132);
+  border-color: rgb(255, 128, 132);
   border-radius: 5px;
   box-shadow: 1px 1px 1px;
   color: white;
@@ -46,17 +42,32 @@
   transition: all ease-in-out 200ms;
   box-shadow: 1px 1px 10px 1px rgba(76, 76, 76, 0.585);
   color: white;
-
 }
 
 .link-div a {
-  text-align: center;
+  // display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 430px;
+  // margin-right: auto;
   text-decoration: none;
-  color: rgb(34, 34, 34);
+  width: 130px;
+  height: 50px;
+  background-color: rgb(255, 128, 132);
+  border-color: rgb(255, 128, 132);
+  border-radius: 5px;
+  box-shadow: 1px 1px 1px;
+  color: white;
+  // padding-top: 0;
 }
 
 .link-div a:hover {
-  color: rgb(255, 56, 92);
+  transform: scale(105%);
+  transition: all ease-in-out 200ms;
+  box-shadow: 1px 1px 10px 1px rgba(76, 76, 76, 0.585);
+  color: white;
+
 }
 
 // font color:
