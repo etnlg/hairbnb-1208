@@ -1,22 +1,53 @@
 .ownercontainer {
-  gap: 200px;
-}
-
-.ownercreate {
-  background-color: white;
-
+  gap: 180px;
 }
 
 .ownercreate a {
+  background-image: url("createlogo.png");
+  background-size: 80%;
+  background-repeat: no-repeat;
+  background-position: center;
   text-decoration: none;
   color: black;
-  background-color: rgba(106, 150, 100, 0.893);
+  // background-color: rgba(106, 150, 100, 0.893);
   border-radius: 5px;
   box-shadow: 1px 1px 2px;
   padding: 8px;
+  background-color: white;
+  width: 250px;
+  height: 250px;
+  background-color: white;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 2px;
 }
 
+.ownercreateview a {
+  background-image: url("eyelogo.jpg");
+  text-decoration: none;
+  color: black;
+  border-radius: 5px;
+  box-shadow: 1px 1px 2px;
+  padding: 8px;
+  background-color: white;
+  width: 250px;
+  height: 250px;
+  background-color: white;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 2px;
+}
+
+
+
 .ownercreate a:hover {
+  transform: scale(105%);
+  transition: all ease-in-out 200ms;
+  box-shadow: 1px 1px 10px 1px rgba(76, 76, 76, 0.585);
+  color: black;
+}
+
+.ownercreateview a:hover {
   transform: scale(105%);
   transition: all ease-in-out 200ms;
   box-shadow: 1px 1px 10px 1px rgba(76, 76, 76, 0.585);
@@ -26,7 +57,5 @@
 .text-center p {
   display: flex;
   flex-direction: column;
-  // // justify-content: center;
-  // // align-items: center;
   height: 100vh;
 }
