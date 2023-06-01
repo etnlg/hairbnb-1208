@@ -1,0 +1,34 @@
+.divlogin {
+  width: 130px;
+  height: 50px;
+  background-color: rgb(255, 128, 132);
+  border-color: rgb(255, 128, 132);
+  border-radius: 5px;
+  box-shadow: 1px 1px 1px;
+  color: white;
+}
+
+.divforgotpass > a, .divsignup > a, .log-in-sign-up > a {
+  text-decoration: none;
+  color: rgb(108, 117, 125);
+}
+
+.divsignup > a:hover{
+  color: black;
+}
+
+.divforgotpass > a:hover{
+  color: black;
+}
+
+.log-in-sign-up > a:hover{
+  color: black;
+}
+
+
+
+
+// .divsignup > a {
+//   text-decoration: none;
+//   color: rgb(108, 117, 125) ;
+// }
