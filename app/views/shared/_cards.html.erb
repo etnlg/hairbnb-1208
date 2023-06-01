@@ -3,7 +3,7 @@
       <%= link_to wig_path(wig) do %>
 
           <div class = "cardshome p-3 ">
-              <%= cl_image_tag wig.photo.key, crop: :fill, class: "card-image"  %>
+              <%= cl_image_tag wig.photo.key, crop: :fill, class: "card-image-top"  %>
               <h3 class = title><strong><%= wig.title %></strong></h3>
               <p class = description><%= wig.description %></p>
               <p class = location><%= wig.location %></p>

@@ -6,7 +6,7 @@
   <div class = "col-6">
     <h4>Your booking waiting for response!<h4>
     <% @bookings.where(satuts: 'pending').each do |b| %>
-      <div class = "container bg-white rounded shadow text-align m-3">
+      <div class = "container-accept-decline  rounded shadow text-align m-3">
         <p><%= User.find(b.user_id).first_name %> <%=User.find(b.user_id).last_name%> wants to book your wig!</p>
         <p><strong>From:</strong> <%= b.start_date %></p>
         <p><strong>To:</strong> <%= b.end_date %></p>
