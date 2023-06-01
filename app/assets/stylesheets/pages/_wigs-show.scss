@@ -31,10 +31,10 @@
   margin: 0 auto;
   width: 130px;
   height: 50px;
-  background-color: rgba(147, 168, 144, 0.893);
-  border-color: rgba(147, 168, 144, 0.893);
+  background-color: #6E8F5E;
+  border-color: #6E8F5E;
   border-radius: 5px;
-  box-shadow: 1px 1px 2px;
+  box-shadow: 1px 1px 1px;
   color: black;
 }
 
@@ -44,14 +44,12 @@
 }
 
 .btnreservation:hover {
-  transform: scale(110%);
-  transition: all ease-in 200ms;
-  box-shadow: 1px 1px 20px 1px black;
+  transform: scale(105%);
+  transition: all ease-in-out 200ms;
+  box-shadow: 1px 1px 10px 1px rgba(76, 76, 76, 0.585);
   color: black;
 
 }
-
-
 
 .link-div a {
   text-align: center;

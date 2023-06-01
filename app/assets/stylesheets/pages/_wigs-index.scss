@@ -45,9 +45,12 @@
 }
 
 .div-card:hover {
-  transform: scale(110%);
-  transition: all ease-in 200ms;
-  box-shadow: 0px 0px 2px 0px rgb(34, 34, 34);
+  transform: scale(105%);
+  transition: all ease-in-out 200ms;
+  box-shadow: 1px 1px 10px 1px rgba(76, 76, 76, 0.585);
+  color: black;
+  background: transparent;
+  border-radius: 10px;
 }
 
 .title, .price {

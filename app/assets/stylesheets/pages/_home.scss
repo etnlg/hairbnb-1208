@@ -57,7 +57,6 @@
   top: -19px;
   left: 320px;
   width: 240px;
-
 }
 
 .form .btn {
@@ -65,24 +64,13 @@
   border-radius: 5px;
   box-shadow: 1px 1px 2px;
   width: 90%;
-  flex-grow: 1;
-  flex-shrink: 1;
 }
-
-.form .input-home {
-  flex-grow: 1;
-  flex-shrink: 1;
-}
-
-.form #location {
-  flex-grow: 1;
-  flex-shrink: 1;
-}
-
-
 
 .form .btn:hover {
-  background-color: rgba(209, 209, 209, 0.633);
+  transform: scale(105%);
+  transition: all ease-in-out 200ms;
+  box-shadow: 1px 1px 10px 1px rgba(76, 76, 76, 0.585);
+  color: black;
 }
 
 .form .input {
@@ -90,7 +78,7 @@
 }
 
 .container-cards {
-  background-color: white;
+  background-color:#F4F4F4;
   width: 75%;
   margin-right: auto;
   margin-left: auto;
@@ -101,36 +89,26 @@
   justify-content: center;
   flex-wrap: wrap;
   margin-top: 20px;
+  padding: 0;
   padding-bottom: 20px;
-}
-
-.cards .eachcards {
-  width: 250px;
-  height: 350px;
-  border-color: rgb(171, 168, 168);
-  border-radius: 10px;
-  padding: 20px;
-  margin: 20px;
-  background-color:  rgba(106, 150, 100, 0.638) ;
-
+  gap: 70px;
 }
 
 .cardshome {
   width: 250px;
   height: 450px;
   position: relative;
-  background-color: rgba(238, 238, 238, 0.663);
+  background-color: white;
   margin: 10px;
   border-radius: 10px;
   box-shadow: 1px 1px 2px;
 }
 
 .cardshome:hover {
-  transform: scale(110%);
-  transition: all ease-in 200ms;
-  box-shadow: 1px 1px 20px 1px black;
+  transform: scale(105%);
+  transition: all ease-in-out 200ms;
+  box-shadow: 1px 1px 10px 1px rgba(76, 76, 76, 0.585);
   color: black;
-
 }
 
 .cards a {
@@ -138,11 +116,6 @@
   color: black;
 }
 
-
-
 .text-center {
   padding-top: 30px;
 }
-// .red-border {
-//   border: 1px solid red;
-// }
