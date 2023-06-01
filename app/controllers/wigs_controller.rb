@@ -28,7 +28,7 @@ class WigsController < ApplicationController
 
   def by_location
     @location = params[:location]
-    @wigs = Wig.near(@location, 20)
+    @wigs = Wig.near(@location, 50)
     number_chars = @wigs.length.to_s.chars
     number_chars[-1] = '0'
     number = number_chars.join.to_i
