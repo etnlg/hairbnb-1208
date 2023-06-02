@@ -27,7 +27,7 @@
                     <p><%= response %></p>
                   </div>
                   <div class="avatar-container">
-                    <%= image_tag "https://kitt.lewagon.com/placeholder/users/krokrob", class: "avatar" %>
+                    <%= cl_image_tag User.find(Wig.find(b.wig_id).user_id).photo.key, crop: :fill, class: "avatar", alt: "dropdown menu"  %>
                   </div>
               </div>
             </div>
@@ -64,7 +64,7 @@
                     <p><%= response %></p>
                   </div>
                   <div class="avatar-container">
-                    <%= image_tag "https://kitt.lewagon.com/placeholder/users/krokrob", class: "avatar" %>
+                    <%= cl_image_tag User.find(Wig.find(b.wig_id).user_id).photo.key, crop: :fill, class: "avatar", alt: "dropdown menu"  %>
                   </div>
               </div>
             </div>

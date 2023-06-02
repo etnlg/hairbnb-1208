@@ -7,7 +7,7 @@
     <h4 class="text-center">Requested bookings<h4>
     <% @bookings.where(satuts: 'pending').each do |b| %>
       <div class = "container-accept-decline   text-align m-3">
-        <p><strong><%= User.find(b.user_id).first_name %> <%=User.find(b.user_id).last_name%></strong> wants to book your wig</p>
+        <p><strong><%= User.find(b.user_id).first_name %> <%=User.find(b.user_id).last_name%></strong> wants to book your <%= Wig.find(b.wig_id).title %></p>
         <p><strong>From:</strong> <%= b.start_date %></p>
         <p><strong>To:</strong> <%= b.end_date %></p>
         <div class="link-container">
