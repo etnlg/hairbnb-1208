@@ -1,10 +1,11 @@
 <div class = "containerreservation m-5 mb-0">
     <div class="main-container-reservation col-lg-8">
       <h2> <%= @wig.title %> </h2>
-      <div class = "m-5 bg-white">
-        <%= cl_image_tag @wig.photo.key, crop: :fill%>
+      <div class = "photo-show-container m-5 bg-white">
+        <%= cl_image_tag @wig.photo.key, class: "photo-show", crop: :fill%>
       </div>
 
+      <p><%= @wig.location %></p>
       <hr class="my-4 bg-dark">
 
       <p><%= @wig.description %></p>
@@ -44,10 +45,10 @@
 </div>
 
 <% if @condition %>
-  <div class = "d-flex justify-content-center mb-5">
-    <p><strong>This wig belongs to you, do you want to remove or edit it ?</strong></p>
+  <div class = "d-flex justify-content-center mb-2">
+    <p><strong>This wig belongs to you ? Do you want to remove or edit it ?</strong></p>
   </div>
-  <div class = "d-flex justify-content-around">
+  <div class = " link-show-page ">
     <p><%= link_to 'Remove wig', wig_path(@wig), data: { "turbo-method": :delete, turbo_confirm: "Are you sure ? Once removed, this wigs won't be available anymore" } %></p>
     <p><%= link_to 'Edit wig', edit_wig_path(@wig) %></p>
   </div>

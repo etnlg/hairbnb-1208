@@ -19,6 +19,8 @@
     <%= render "shared/navbar" %>
     <%= yield %>
     <%= render "shared/flashes" %>
+    <% unless current_page?(booking_client_path) %>
     <%= render "shared/footer" %>
+    <% end %>
   </body>
 </html>
