@@ -32,3 +32,20 @@
 .navbar-nav {
   margin: auto;
 }
+
+.nav-item-owner #navbarDropdown {
+  text-decoration: none;
+  color: rgb(108, 117, 125);
+}
+
+.nav-item-owner p {
+  margin: 8px;
+}
+
+.nav-item-owner #navbarDropdown:hover{
+  color: black;
+}
+
+.dropdown-item:active {
+  background-color:  rgb(172, 173, 174);
+}

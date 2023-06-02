@@ -14,17 +14,48 @@ User.destroy_all
 
 puts "creating 20 users and wigs"
 
+image = Rails.root.join("app", "assets", "images", "user-bold1.jpg")
+file = File.open(ActionController::Base.helpers.image_path(image))
 @etienne = User.new(first_name: "Etienne", last_name: "Autriche", email: "etnlg@icloud.com", password: "SeedTest")
+@etienne.photo.attach(io: file, filename: "user-bold1.jpg", content_type: "image/jpg")
 @etienne.save!
 
-20.times {
-  user = User.new
-  user.first_name = ('a'..'z').to_a.shuffle[0] + ('a'..'z').to_a.shuffle[0]+ Faker::Name.first_name
-  user.last_name = ('a'..'z').to_a.shuffle[0]+ ('a'..'z').to_a.shuffle[0] + Faker::Name.last_name
-  user.email = ('a'..'z').to_a.shuffle[0] + ('a'..'z').to_a.shuffle[0] +Faker::Internet.email(name: user.first_name)
-  user.password = ('a'..'z').to_a.shuffle[0] + ('a'..'z').to_a.shuffle[0] + Faker::Internet.password(min_length: 8)
-  user.save!
-}
+# 20.times {
+#   user = User.new
+#   user.first_name = ('a'..'z').to_a.shuffle[0] + ('a'..'z').to_a.shuffle[0]+ Faker::Name.first_name
+#   user.last_name = ('a'..'z').to_a.shuffle[0]+ ('a'..'z').to_a.shuffle[0] + Faker::Name.last_name
+#   user.email = ('a'..'z').to_a.shuffle[0] + ('a'..'z').to_a.shuffle[0] +Faker::Internet.email(name: user.first_name)
+#   user.password = ('a'..'z').to_a.shuffle[0] + ('a'..'z').to_a.shuffle[0] + Faker::Internet.password(min_length: 8)
+#   user.save!
+# }
+
+image = Rails.root.join("app", "assets", "images", "user-bold1.jpg")
+file = File.open(ActionController::Base.helpers.image_path(image))
+user = User.new(first_name: "Jean-Hubert", last_name: "Fauteuil", email: "fauteuil@gmail.com", password: "coucou")
+user.photo.attach(io: file, filename: "user-bold1.jpg", content_type: "image/jpg")
+user.save!
+image = Rails.root.join("app", "assets", "images", "user-bold2.jpg")
+file = File.open(ActionController::Base.helpers.image_path(image))
+user = User.new(first_name: "Jean-Claude", last_name: "Famous", email: "famous@gmail.com", password: "coucou")
+user.photo.attach(io: file, filename: "user-bold2.jpg", content_type: "image/jpg")
+user.save!
+image = Rails.root.join("app", "assets", "images", "user-bold3.jpg")
+file = File.open(ActionController::Base.helpers.image_path(image))
+user = User.new(first_name: "Louis", last_name: "Fingers", email: "fingers@gmail.com", password: "coucou")
+user.photo.attach(io: file, filename: "user-bold3.jpg", content_type: "image/jpg")
+user.save!
+image = Rails.root.join("app", "assets", "images", "user-bold4.jpg")
+file = File.open(ActionController::Base.helpers.image_path(image))
+user = User.new(first_name: "George", last_name: "Bush", email: "bush@gmail.com", password: "coucou")
+user.photo.attach(io: file, filename: "user-bold4.jpg", content_type: "image/jpg")
+user.save!
+image = Rails.root.join("app", "assets", "images", "user-bold5.jpg")
+file = File.open(ActionController::Base.helpers.image_path(image))
+user = User.new(first_name: "Conor", last_name: "Mcgregor", email: "mcgregor@gmail.com", password: "coucou")
+user.photo.attach(io: file, filename: "user-bold5.jpg", content_type: "image/jpg")
+user.save!
+
+
 
 image = Rails.root.join("app", "assets", "images", "wigone.jpg")
 file = File.open(ActionController::Base.helpers.image_path(image))

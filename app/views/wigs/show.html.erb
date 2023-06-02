@@ -1,4 +1,4 @@
-<div class = "containerreservation m-5 mb-0">
+<div class = "containerreservation m-5 mb-6">
     <div class="main-container-reservation col-lg-8">
       <h2> <%= @wig.title %> </h2>
       <div class = "photo-show-container m-5 p-5 bg-white">
@@ -48,9 +48,7 @@
 
 
 <% if @condition %>
-  <div class = "d-flex justify-content-center mb-2">
-    <p><strong>This wig belongs to you ? Do you want to remove or edit it ?</strong></p>
-  </div>
+
   <div class = " link-show-page ">
     <p><%= link_to 'Remove wig', wig_path(@wig), data: { "turbo-method": :delete, turbo_confirm: "Are you sure ? Once removed, this wigs won't be available anymore" } %></p>
     <p><%= link_to 'Edit wig', edit_wig_path(@wig) %></p>

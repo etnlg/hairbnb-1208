@@ -15,9 +15,22 @@
           <li class="nav-item">
             <%= link_to "Discover", wigs_path, class: "nav-link" %>
           </li>
-          <li class="nav-item">
-            <%= link_to "Host", booking_choice_path, class: "nav-link" %>
+
+          <li class="nav-item-owner">
+            <a href="#" class="avatar" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <p>Owner</p>
+            </a>
+            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+
+              <%= link_to "Add a wig", new_wig_path, class: "dropdown-item" %>
+
+              <%= link_to "Requested bookings", booking_owner_path, class: "dropdown-item" %>
+
+            </div>
           </li>
+
+
+
 
           <li class="nav-item dropdown">
           <a href="#" class="avatar" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
