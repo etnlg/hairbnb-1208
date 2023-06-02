@@ -22,9 +22,11 @@
     <% unless current_page?(new_user_registration_path) %>
       <% unless current_page?(new_user_password_path) %>
         <% unless current_page?(new_user_session_path) %>
+        <% unless current_page?(booking_owner_path) %>
           <%= render "shared/footer" %>
         <% end %>
       <% end %>
+    <% end %>
     <% end %>
   </body>
 </html>
