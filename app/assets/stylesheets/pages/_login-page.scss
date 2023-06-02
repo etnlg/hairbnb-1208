@@ -8,7 +8,7 @@
   color: white;
 }
 
-.divforgotpass > a, .divsignup > a, .log-in-sign-up > a {
+.divforgotpass > a, .divsignup > a, .log-in-sign-up > a, .div-go-back > a {
   text-decoration: none;
   color: rgb(108, 117, 125);
 }
@@ -25,6 +25,9 @@
   color: black;
 }
 
+.div-go-back > a:hover {
+  color: black;
+}
 
 
 
