@@ -7,6 +7,8 @@ class BookingsController < ApplicationController
 
   def client
     @bookings = Booking.where(user_id: current_user.id)
+    @bookings_accepted = @bookings.where(satuts: "accepted")
+    @bookings_pending = @bookings.where(satuts: "pending")
   end
 
   def choice
