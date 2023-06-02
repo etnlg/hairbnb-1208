@@ -1,7 +1,7 @@
 <div class = "containerreservation m-5 mb-0">
     <div class="main-container-reservation col-lg-8">
       <h2> <%= @wig.title %> </h2>
-      <div class = "photo-show-container m-5 bg-white">
+      <div class = "photo-show-container m-5 p-5 bg-white">
         <%= cl_image_tag @wig.photo.key, class: "photo-show", crop: :fill%>
       </div>
 
@@ -16,6 +16,9 @@
             <p><strong>Renting price per day</strong></p>
             <h5><%= @wig.price_per_day.to_i %> CAD</h5>
           </div>
+      </div>
+      <div class = "link-div text-center mb-4 pt-0">
+        <%= link_to "Previous Page", wigs_path %>
       </div>
     </div>
 
@@ -40,9 +43,9 @@
     </div>
 </div>
 
-<div class = "link-div text-center mb-4 pt-0">
+<%# <div class = "link-div text-center mb-4 pt-0">
   <%= link_to "Previous Page", wigs_path %>
-</div>
+
 
 <% if @condition %>
   <div class = "d-flex justify-content-center mb-2">
