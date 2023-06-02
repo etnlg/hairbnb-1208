@@ -14,7 +14,7 @@
                 <p class = price><strong><%= wig.price_per_day %> CAD</strong> day</p>
               </div>
               <div class="avatar-container">
-                <%= image_tag "https://kitt.lewagon.com/placeholder/users/krokrob", class: "avatar" %>
+              <%= cl_image_tag User.find(wig.user_id).photo.key, class: "avatar", crop: :fill%>
               </div>
           </div>
 
