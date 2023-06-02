@@ -18,7 +18,7 @@
           </div>
       </div>
       <div class = "link-div text-center mb-4 pt-0">
-        <%= link_to "Previous Page", wigs_path %>
+        <%= link_to "Go back to the list", wigs_path %>
       </div>
     </div>
 
@@ -28,13 +28,13 @@
           <div class="m-1 d-flex align-item-center justify-content-center">
             <%= f.label :wig_in %>
           </div>
-          <%= f.date_field :start_date %>
+          <%= f.date_field :start_date, min: Date.today, value: Date.today %>
         </div>
         <div class = "d-flex justify-content-end mb-4">
           <div class="m-1 d-flex align-item-center justify-content-center">
             <%= f.label :wig_out %>
           </div>
-          <%= f.date_field :end_date%>
+          <%= f.date_field :end_date, min: Date.today + 1, value: Date.today + 1 %>
         </div>
         <div class=" btnreservation d-flex justify-content-end">
           <%= f.submit "Book", class: "btnreservation" %>
