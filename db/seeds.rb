@@ -14,10 +14,10 @@ User.destroy_all
 
 puts "creating 20 users and wigs"
 
-image = Rails.root.join("app", "assets", "images", "user-bold1.jpg")
+image = Rails.root.join("app", "assets", "images", "IMG_8194.jpg")
 file = File.open(ActionController::Base.helpers.image_path(image))
 @etienne = User.new(first_name: "Etienne", last_name: "Autriche", email: "etnlg@icloud.com", password: "SeedTest")
-@etienne.photo.attach(io: file, filename: "user-bold1.jpg", content_type: "image/jpg")
+@etienne.photo.attach(io: file, filename: "IMG_8194.jpg", content_type: "image/jpg")
 @etienne.save!
 
 # 20.times {
