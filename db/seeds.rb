@@ -159,7 +159,7 @@ file = File.open(ActionController::Base.helpers.image_path(image))
 @thewig.save!
 
 
-8.times {
+3.times {
   Booking.create(start_date: Time.new(2023, 7, 7), end_date: Time.new(2023, 7, 8), wig_id: @thewig.id, user_id: User.all.sample.id, satuts: 'pending')
 }
 
