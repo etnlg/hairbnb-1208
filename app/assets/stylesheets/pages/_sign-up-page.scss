@@ -7,3 +7,19 @@
   box-shadow: 1px 1px 1px;
   color: white;
 }
+
+.div-sign-up:hover {
+  transform: scale(105%);
+  transition: all ease-in-out 200ms;
+  box-shadow: 1px 1px 10px 1px rgba(76, 76, 76, 0.585);
+  color: white;
+  background-color: rgb(255, 128, 132);
+}
+
+.div-reset:hover {
+  transform: scale(105%);
+  transition: all ease-in-out 200ms;
+  box-shadow: 1px 1px 10px 1px rgba(76, 76, 76, 0.585);
+  color: white;
+  background-color: rgb(255, 128, 132);
+}

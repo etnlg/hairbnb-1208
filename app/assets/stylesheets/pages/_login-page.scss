@@ -8,6 +8,14 @@
   color: white;
 }
 
+.divlogin:hover {
+  transform: scale(105%);
+  transition: all ease-in-out 200ms;
+  box-shadow: 1px 1px 10px 1px rgba(76, 76, 76, 0.585);
+  color: white;
+  background-color: rgb(255, 128, 132);
+}
+
 .divforgotpass > a, .divsignup > a, .log-in-sign-up > a, .div-go-back > a {
   text-decoration: none;
   color: rgb(108, 117, 125);
