@@ -132,6 +132,8 @@ file = File.open(ActionController::Base.helpers.image_path(image))
   Booking.create(start_date: Time.new(2023, 7, 7), end_date: Time.new(2023, 7, 8), wig_id: @thewig.id, user_id: User.all.sample.id, satuts: 'pending')
 }
 
+Booking.create(start_date: Time.new(2023, 7, 7), end_date: Time.new(2023, 7, 8), wig_id: Wig.all.sample.id, user_id: @etienne.id, satuts: "accepted")
+
 
 
 puts "Done"
