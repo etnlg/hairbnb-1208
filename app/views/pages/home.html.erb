@@ -4,8 +4,11 @@
     <h1>Hairbnb, the solution to feel <br> sexy again!</h1>
     <div class="form">
       <form action="/location">
-        <div class = "form-banner d-flex justify-content-end mb-1" data-controller="address-autocomplete">
-          <input placeholder="Where ?" type="location" name="location" id="location">
+        <div class = "form-banner d-flex justify-content-end mb-1"
+             data-controller="address-autocomplete"
+             data-address-autocomplete-api-key-value=<%=ENV["MAPBOX_API_KEY"]%>
+        >
+          <input placeholder="Where?" type="location" name="location" id="location" class="d-none" data-address-autocomplete-target="location">
         </div>
 
         <div class = "form-banner d-flex justify-content-end mb-1" >
