@@ -11,7 +11,7 @@
                 <p class = location><%= wig.location %></p>
               </div>
               <div class="cards-price">
-                <p class = price><strong><%= wig.price_per_day %> CAD</strong> day</p>
+                <p class = price><strong><%= wig.price_per_day.to_i %> CAD</strong> day</p>
               </div>
               <div class="avatar-container">
                 <%= image_tag "https://kitt.lewagon.com/placeholder/users/krokrob", class: "avatar" %>
