@@ -1,0 +1,41 @@
+.cards-of-bookings {
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.cards-by-loc .cards {
+  gap: 10px;
+}
+
+.cardshome {
+  width: 250px;
+  height: 500px;
+  position: relative;
+  background-color: white;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 2px;
+  text-align: center;
+}
+
+.cardspagebookings {
+
+  width: 250px;
+  height: 710;
+  position: relative;
+  background-color: white;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 2px;
+}
+
+.card-image-booking {
+  height: auto;
+  max-height: 210px !important;
+  max-width:100%;
+  max-height:100%;
+  display: block;
+  margin: auto;
+}

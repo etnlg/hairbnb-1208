@@ -1,3 +1,34 @@
 .container-accept-decline {
-  background-color: red;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 1px 1px 2px;
+  padding: 10px;
+  text-align: center;
+}
+
+
+.container-accept-decline a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  width: 130px;
+  height: 50px;
+  background-color: rgb(255, 128, 132);
+  border-radius: 5px;
+  box-shadow: 1px 1px 2px black;
+  color: white;
+}
+
+.container-accept-decline a:hover {
+  transform: scale(105%);
+  transition: all ease-in-out 200ms;
+  box-shadow: 1px 1px 10px 1px rgba(76, 76, 76, 0.585);
+  color: white;
+}
+
+.link-container {
+  display: flex;
+  justify-content: space-around;
 }

@@ -2,7 +2,7 @@
   <h1>Discover all the wigs</h1>
 </div>
 
-<div class="main-container d-flex border">
+<div class="main-container d-flex ">
     <div class="wigs-container">
       <% @wigs.each do |wig| %>
         <div class = "div-card">
@@ -11,8 +11,12 @@
               <%= cl_image_tag wig.photo.key, crop: :fill, class: "card-image-all-wigs"  %>
               <h3 class = title><strong><%= wig.title %></strong></h3>
               <p class = description><%= wig.description %></p>
-              <p class = location><%= wig.location %></p>
-              <p class = price><strong><%= wig.price_per_day.to_i %> CAD</strong> day</p>
+              <div class="cards-location">
+                <p class = location><%= wig.location %></p>
+              </div>
+              <div class="price-index">
+                <p class = price><strong><%= wig.price_per_day.to_i %> CAD</strong> day</p>
+              </div>
               <div class="avatar-container">
                 <%= image_tag "https://kitt.lewagon.com/placeholder/users/krokrob", class: "avatar" %>
               </div>

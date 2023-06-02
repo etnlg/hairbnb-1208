@@ -4,26 +4,28 @@
 
 <div class = "row">
   <div class = "col-6">
-    <h4>Your booking waiting for response!<h4>
+    <h4 class="text-center">Requested bookings<h4>
     <% @bookings.where(satuts: 'pending').each do |b| %>
-      <div class = "container-accept-decline  rounded shadow text-align m-3">
-        <p><%= User.find(b.user_id).first_name %> <%=User.find(b.user_id).last_name%> wants to book your wig!</p>
+      <div class = "container-accept-decline   text-align m-3">
+        <p><strong><%= User.find(b.user_id).first_name %> <%=User.find(b.user_id).last_name%></strong> wants to book your wig</p>
         <p><strong>From:</strong> <%= b.start_date %></p>
         <p><strong>To:</strong> <%= b.end_date %></p>
-        <%= link_to "Accept the request",
-        accept_path(b),
-        data: {turbo_method: :patch, turbo_confirm: "Are you sure?"}%>
-        <%= link_to "Decline the request",
-        decline_path(b),
-        data: {turbo_method: :patch, turbo_confirm: "Are you sure?"}%>
+        <div class="link-container">
+          <%= link_to "Accept",
+          accept_path(b),
+          data: {turbo_method: :patch, turbo_confirm: "Are you sure?"}%>
+          <%= link_to "Decline",
+          decline_path(b),
+          data: {turbo_method: :patch, turbo_confirm: "Are you sure?"}%>
+        </div>
       </div>
     <% end %>
   </div>
   <div class = "col-6">
-    <h4>Your upcoming booking<h4>
+    <h4 class="text-center">Upcoming bookings<h4>
     <% @bookings.where(satuts: 'accepted').each do |b| %>
-      <div class = "container bg-white rounded shadow text-align m-3">
-        <p><%= User.find(b.user_id).first_name %> <%=User.find(b.user_id).last_name%> wants to book your wig!</p>
+      <div class = "container-accept-decline text-align m-3">
+        <p><strong><%= User.find(b.user_id).first_name %> <%=User.find(b.user_id).last_name%></strong> booked your wig</p>
         <p><strong>From:</strong> <%= b.start_date %></p>
         <p><strong>To:</strong> <%= b.end_date %></p>
       </div>

@@ -1,6 +1,7 @@
 .main-container{
   display: flex;
   margin: auto;
+  margin-bottom: 20px;
 }
 
 .h1-index {
@@ -96,4 +97,11 @@
   position: absolute;
   bottom: 10px;
   right: 10px;
+}
+
+.price-index {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin-left: 10px;
 }
