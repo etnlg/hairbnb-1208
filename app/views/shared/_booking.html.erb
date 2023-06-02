@@ -1,78 +1,76 @@
-<div class = "cards d-flex">
-  <div class = "container">
-    <% @bookings_pending.each do |b| %>
+<div class = "d-flex">
 
-      <div class = "cards-of-bookings">
+    <div class = "flex-item">
+      <h2 class="text-center">Pending bookings</h2>
+        <div class="cards-of-bookings">
+          <% @bookings_pending.each do |b| %>
+            <div class = "cards-of-bookings">
 
-        <div class = "cardspagebookings p-3 ">
-            <%= cl_image_tag Wig.find(b.wig_id).photo.key, crop: :fill, class: "card-image-booking"  %>
-            <h3 class = title><strong><%= Wig.find(b.wig_id).title %></strong></h3>
-            <p class = description><%= Wig.find(b.wig_id).description%></p>
-            <p class = location><%= Wig.find(b.wig_id).location %></p>
+              <div class = "cardspagebookings p-3 ">
+                  <%= cl_image_tag Wig.find(b.wig_id).photo.key, crop: :fill, class: "card-image-booking"  %>
+                  <h3 class = title><strong><%= Wig.find(b.wig_id).title %></strong></h3>
+                  <p class = description><%= Wig.find(b.wig_id).description%></p>
+                  <p class = location><%= Wig.find(b.wig_id).location %></p>
 
-            <hr class="my-4 bg-dark">
-            <div class="cardsdate">
-              <h4><strong>From: </strong><%= b.start_date %></h4>
-              <h4><strong>Until: </strong><%= b.end_date %></h4>
-            </div>
+                  <hr class="my-4 bg-dark">
+                  <div class="cardsdate">
+                    <h4><strong>From: </strong><%= b.start_date %></h4>
+                    <h4><strong>Until: </strong><%= b.end_date %></h4>
+                  </div>
 
-            <div class="cardsdate m-3">
-              <hr class="my-4 bg-dark">
-              <% b.satuts == "accepted" ? response = "✅ Your request has been accepted" : response = "The owner didn't give a response yet" %>
-              <div class = "d-flex justify-content-center mt-2">
-                <p><strong>Status:</strong><p>
+                  <div class="cardsdate m-3">
+                    <hr class="my-4 bg-dark">
+                    <% b.satuts == "accepted" ? response = "✅ Your request has been accepted" : response = "The owner didn't give a response yet" %>
+                    <div class = "d-flex justify-content-center mt-2">
+                      <p><strong>Status:</strong><p>
+                    </div>
+                    <p><%= response %></p>
+                  </div>
+                  <div class="avatar-container">
+                    <%= image_tag "https://kitt.lewagon.com/placeholder/users/krokrob", class: "avatar" %>
+                  </div>
               </div>
-              <p><%= response %></p>
             </div>
-            <div class="avatar-container">
-              <%= image_tag "https://kitt.lewagon.com/placeholder/users/krokrob", class: "avatar" %>
-            </div>
+          <% end %>
+        </div>
+    </div>
 
-      </div>
-  <% end %>
-  </div>
 
-  <div class = "container">
-    <% @bookings_accepted.each do |b| %>
 
-      <div class = "cards-of-bookings">
+    <div class = "flex-item">
+      <h2 class="text-center">Accepted bookings</h2>
+        <div class="cards-of-bookings">
+          <% @bookings_accepted.each do |b| %>
+            <div class = "cards-of-bookings">
 
-        <div class = "cardspagebookings p-3 ">
-            <%= cl_image_tag Wig.find(b.wig_id).photo.key, crop: :fill, class: "card-image-booking"  %>
-            <h3 class = title><strong><%= Wig.find(b.wig_id).title %></strong></h3>
-            <p class = description><%= Wig.find(b.wig_id).description%></p>
-            <p class = location><%= Wig.find(b.wig_id).location %></p>
+              <div class = "cardspagebookings p-3 ">
+                  <%= cl_image_tag Wig.find(b.wig_id).photo.key, crop: :fill, class: "card-image-booking"  %>
+                  <h3 class = title><strong><%= Wig.find(b.wig_id).title %></strong></h3>
+                  <p class = description><%= Wig.find(b.wig_id).description%></p>
+                  <p class = location><%= Wig.find(b.wig_id).location %></p>
 
-            <hr class="my-4 bg-dark">
-            <div class="cardsdate">
-              <h4><strong>From: </strong><%= b.start_date %></h4>
-              <h4><strong>Until: </strong><%= b.end_date %></h4>
-            </div>
+                  <hr class="my-4 bg-dark">
+                  <div class="cardsdate">
+                    <h4><strong>From: </strong><%= b.start_date %></h4>
+                    <h4><strong>Until: </strong><%= b.end_date %></h4>
+                  </div>
 
-            <div class="cardsdate m-3">
-              <hr class="my-4 bg-dark">
-              <% b.satuts == "accepted" ? response = "✅ Your request has been accepted" : response = "The owner didn't give a response yet" %>
-              <div class = "d-flex justify-content-center mt-2">
-                <p><strong>Status:</strong><p>
+                  <div class="cardsdate m-3">
+                    <hr class="my-4 bg-dark">
+                    <% b.satuts == "accepted" ? response = "✅ Your request has been accepted" : response = "The owner didn't give a response yet" %>
+                    <div class = "d-flex justify-content-center mt-2">
+                      <p><strong>Status:</strong><p>
+                    </div>
+                    <p><%= response %></p>
+                  </div>
+                  <div class="avatar-container">
+                    <%= image_tag "https://kitt.lewagon.com/placeholder/users/krokrob", class: "avatar" %>
+                  </div>
               </div>
-              <p><%= response %></p>
             </div>
-            <div class="avatar-container">
-              <%= image_tag "https://kitt.lewagon.com/placeholder/users/krokrob", class: "avatar" %>
-            </div>
+          <% end %>
+        </div>
 
-      </div>
-    <% end %>
-  </div>
+    </div>
+
 </div>
-
-
-
-
-    <%# <% @bookings.each do |b| %>
-    <%# <div clas = "container"> %>
-      <%# <div class = "d-flex justify-content-between bg-white shadow rounded p-3 m-3 "> %>
-        <%# <div> %>
-          <%# <h3><%= Wig.find(b.wig_id).title<h3>  %>
-          <%# <p><%= Wig.find(b.wig_id).description</p>  %>
-        <%# </div> %>
